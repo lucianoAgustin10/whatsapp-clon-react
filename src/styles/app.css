@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background-color: #0b141a;
+  color: #e9edef;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* ================= MOBILE ================= */
+/* ===== BASE MOBILE (320px) ===== */
+
+.app {
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+/* Por defecto SOLO CHAT visible */
+.sidebar {
+  display: none;
+}
+
+.chat {
+  flex: 1;
+}
+
+
+@media (min-width: 768px) {
+  .sidebar {
+    display: block;
+    width: 280px;
+  }
+
+  .chat {
+    flex: 1;
+  }
+}
+
+@media (min-width: 1440px) {
+  .sidebar {
+    width: 380px;
+  }
+
+  .chat {
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: 2000px) {
+  .app {
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+}
+

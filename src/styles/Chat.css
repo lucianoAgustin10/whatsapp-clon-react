@@ -1,0 +1,187 @@
+.chat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #0b141a;
+  background-image: radial-gradient(#1f2c33 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* ================= HEADER ================= */
+
+.chat-header {
+  height: 60px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #202c33;
+  border-bottom: 1px solid #222d34;
+}
+
+.chat-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.chat-header span {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* ================= MENSAJES ================= */
+
+.chat-messages {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🔥 ESTO HACE QUE ARRANQUE DESDE ABAJO */
+.chat-messages > div:first-child {
+  margin-top: auto;
+}
+
+/* Fila */
+.message-row {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: flex-end;
+}
+
+/* Avatar del otro */
+.message-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 8px;
+}
+
+/* Mensaje base */
+.msg {
+  max-width: 65%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+  position: relative;
+}
+
+/* Mensajes recibidos */
+.msg.them {
+  background-color: #202c33;
+  color: #e9edef;
+  border-top-left-radius: 0;
+}
+
+/* Mensajes enviados */
+.message-row.me {
+  justify-content: flex-end;
+}
+
+.msg.me {
+  background-color: #005c4b;
+  color: #e9edef;
+  border-top-right-radius: 0;
+}
+
+/* Hora */
+.msg-time {
+  display: block;
+  text-align: right;
+  font-size: 11px;
+  opacity: 0.6;
+  margin-top: 4px;
+}
+
+/* ================= INPUT ================= */
+
+.chat-input {
+  height: 62px;
+  padding: 10px 16px;
+  background-color: #202c33;
+  display: flex;
+  align-items: center;
+}
+
+.chat-input input {
+  flex: 1;
+  height: 42px;
+  background-color: #2a3942;
+  border: none;
+  border-radius: 8px;
+  padding: 0 14px;
+  color: #e9edef;
+  font-size: 14px;
+}
+
+.chat-input input::placeholder {
+  color: #8696a0;
+}
+
+.chat-input input:focus {
+  outline: none;
+}
+
+/* Avatar del mensaje propio */
+.message-avatar.me {
+  margin-left: 8px;
+}
+
+/* ================= BOTÓN ENVIAR ================= */
+
+.send-btn {
+  width: 42px;
+  height: 42px;
+  margin-left: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: #2a3942;
+  color: #8696a0;
+  font-size: 18px;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.send-btn.active {
+  background-color: #00a884;
+  color: #fff;
+  cursor: pointer;
+}
+
+.send-btn.active:hover {
+  background-color: #019c7b;
+}
+
+@media (max-width: 768px) {
+  .chat {
+    width: 100%;
+  }
+
+  .chat-header {
+    padding-left: 12px;
+  }
+}
+
+.back-btn {
+  display: none;
+  margin-right: 8px;
+  background: none;
+  border: none;
+  color: #e9edef;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .back-btn {
+    display: block;
+  }
+}
