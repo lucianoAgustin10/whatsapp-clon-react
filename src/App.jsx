@@ -6,9 +6,9 @@ import {
   Navigate,
 } from "react-router-dom";
 
-import Sidebar from "./components/Sidebar/Sidebar";
-import Chat from "./components/Chat/Chat";
-import NavBar from "./components/NavBar/Navbar";
+import sidebar from "./components/sidebar/sidebar";
+import chat from "./components/chat/chat";
+import navbar from "./components/navbar/navbar"
 
 import "./styles/app.css";
 
