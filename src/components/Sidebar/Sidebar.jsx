@@ -1,4 +1,5 @@
 import "../../../styles/sidebar.css";
+
 import { useNavigate } from "react-router-dom";
 
 import juan from "../../assets/juan.jpg";

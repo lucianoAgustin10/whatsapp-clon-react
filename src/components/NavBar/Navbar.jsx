@@ -1,4 +1,4 @@
-import "../../styles/navbar.css";
+import "../../../styles/navbar.css";
 import myAvatar from "../../assets/MyAvatar.jpg"; // poné tu foto real si querés
 
 export default function NavBar() {
