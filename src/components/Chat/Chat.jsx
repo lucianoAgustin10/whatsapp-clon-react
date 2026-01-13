@@ -1,5 +1,6 @@
+import "../../../styles/chat.css"; 
+
 import { useState, useEffect, useRef } from "react";
-import "../../../styles/chat.css";
 import myAvatar from "../../assets/MyAvatar.jpg"; // tu foto
 
 import avatarJuan from "../../assets/juan.jpg";
